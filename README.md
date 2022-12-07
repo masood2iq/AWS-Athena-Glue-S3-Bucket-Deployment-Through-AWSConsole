@@ -5,7 +5,7 @@ Query S3 bucket data with AWS Athena, Glue through AWS console from scratch
 ## Overview
 AWS Athena - Serverless interactive query service works with S3 using standard SQL, you only pay for querying the data
 AWS Glue Crawler - fully managed extract, transform, and load ETL service, runs on S3, creates metadata tables, and that table in the AWS Glue Data Catalog and can be used in Athena to search, and query available data.
-![alt text](.images/image24.png)
+![](./images/image24.png)
 
 ## Part - 1
 Login to your AWS Console and go to "IAM"
