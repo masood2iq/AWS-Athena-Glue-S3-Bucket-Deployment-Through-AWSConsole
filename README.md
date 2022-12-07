@@ -10,27 +10,45 @@ AWS Glue Crawler - fully managed extract, transform, and load ETL service, runs 
 ## Part - 1
 Login to your AWS Console and go to "IAM"
 Click on "Roles" from the left-side panel and click on the "Create role" button on the right-side panel.
+![](./images/image44.png)
 
 Select "AWS Services" and in "Use cases for other AWS services:" search for Glue and select "Glue", click the "Next" button
- 
+![](./images/image10.png)
+
 In "Add permissions" search for AWSGlueConsoleFullAccess, S3FullAccess, and CloudWatchLogs, select "AWSGlueConsoleFullAccess", "AmazonS3FullAccess", "CloudWatchLogsFullAccess" and click on the "Next" button
+![](./images/image7.png)
+![](./images/image32.png)
+![](./images/image13.png)
 
 Give name to that role and description as "AWSGlueS3Role" and click "Create role" button
+![](./images/image19.png)
+![](./images/image38.png)
 
 ## Part - 2
 Now go to "Amazon S3" from your AWS console and select "Buckets" from the left panel, click on the "Create bucket" button from the right panel.
+![](./images/image5.png)
 
 Insert a unique bucket name and select your region
- 
-rest default settings and click on "Create bucket" button
- 
+![](./images/image23.png)
+![](./images/image26.png)
+![](./images/image47.png)
+
+Rest default settings and click on "Create bucket" button
+![](./images/image6.png)
+
 Click on your created bucket to create folder and upload .csv data file
- 
+![](./images/image35.png)
+
 Insert folder name and click on "Create Folder" button
- 
+![](./images/image42.png)
+
 Click on created folder to upload your data file
+![](./images/image46.png)
+![](./images/image45.png)
 
 Upload your data file or folder also there you will find your bucket destination URL
+![](./images/image29.png)
+![](./images/image21.png)
 
 ## Part - 3
 Now from AWS console go to service "AWS Glue" to create Crawler
