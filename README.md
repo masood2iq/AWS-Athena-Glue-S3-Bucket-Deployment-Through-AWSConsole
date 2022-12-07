@@ -52,52 +52,80 @@ Upload your data file or folder also there you will find your bucket destination
 
 ## Part - 3
 Now from AWS console go to service "AWS Glue" to create Crawler
+![](./images/image14.png)
 
 Click on "Crawlers" from left side panel and "Create crawler" button from right side panel
+![](./images/image4.png)
 
 Give name, description and click on "Next" button
+![](./images/image11.png)
 
 If your data source already exists select otherwise "Not yet" and add your data source with the "Add a data source" button
+![](./images/image39.png)
 
 Select S3 from the drop-down menu and give the S3 path, you can also browse the path. Select subsequent crawler runs also if you want to exclude any files you can select and add a pattern and the "Add an S3 data source" button
- 
-After addin data source click "Next" button
+![](./images/image2.png)
+
+After adding data source click "Next" button
+![](./images/image37.png)
 
 Select your IAM role that we created in our first step otherwise you can create new IAM role and click "Next" button
+![](./images/image1.png)
 
 Now you have to add a database for output configuration, click on "Add database" button
+![](./images/image41.png)
 
 In browser new tab will open to create database, fill the details and create database
+![](./images/image18.png)
+![](./images/image16.png)
 
 In the crawler, tab refreshes your database and select created database in "Frequency" select as you want to run your crawler on demand, daily, weekly, monthly, etc, and the "Next" button.
+![](./images/image8.png)
 
 Review and click "Create crawler" button
+![](./images/image34.png)
 
 Select your crawler and click the "Run" button to create a metadata table so it'll take some time to create a metadata table.
+![](./images/image36.png)
+![](./images/image27.png)
 
 After successfull completion, crawler create the metadata table
+![](./images/image31.png)
 
 Meanwhile, you can go to the CloudWatch console, select "Log groups" from the left side panel and check the logs of your Glue Crawler.
+![](./images/image28.png)
+![](./images/image30.png)
+![](./images/image25.png)
 
 ## Part - 4
 Now as crawling is done, you have to go to Athena console and select "Query editor" from the left side panel
+![](./images/image40.png)
 
 In query editor under "Data" select your database that you created in creation of glue crawler
+![](./images/image17.png)
 
 After selecting the database, it'll show the metadata table that created the crawler in "Tables"
+![](./images/image15.png)
 
 Click on three dots besides table and click on "Preview Table" to run query, you can also create your own query in "Query 1" panel
+![](./images/image9.png)
 
 After running your first query, it's through error because there's no query output source define in your S3 bucket to save your query results
+![](./images/image12.png)
 
 To resolve issue go to your S3 bucket console and create a "athena-output" folder there
+![](./images/image43.png)
 
 Copy the path from folder properties
+![](./images/image33.png)
 
 Now back in Athena console, in Query editor select "Settings" tab and click on "Manage" button
+![](./images/image20.png)
 
 Add your S3 bucket athena output path and save
+![](./images/image3.png)
 
 In Query editor click on "Run again" button to run the query so finally you'll get the results
+![](./images/image22.png)
 
 After your all testing you can clean up the resources to avoid any extra charges from AWS, thanks.
