@@ -1,6 +1,6 @@
 # AWS_Athena_Glue_Querying_S3_Bucket_Data_Through_AWSConsole
 ## Description
-Query S3 bucket data with AWS Athena, Glue through AWS console from scratch
+AWS Athena, Glue Database, Glue Crawler and S3 buckets deployment through AWS GUI console.
 
 ## Overview
 AWS Athena - Serverless interactive query service works with S3 using standard SQL, you only pay for querying the data
